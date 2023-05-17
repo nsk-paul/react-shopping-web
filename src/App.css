@@ -36,3 +36,74 @@
     transform: rotate(360deg);
   }
 }
+
+main { 
+  padding-top: 80px;
+}
+
+.cardbox {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 300px;
+  height: 400px;
+  margin: 20px;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+  transition: transform 0.3s ease-in-out;
+}
+
+
+.cardbox:hover{
+  transform: translateY(-5px);
+}
+
+.cardbox img {
+  display: block;
+  text-align: center;
+  max-width: 100%;
+  max-height: 200px;
+  margin: 0 auto;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.cardbox h2 {
+  font-size: 1.5rem;
+  margin: 0;
+}
+
+.cardbox p {
+  font-size: 1rem;
+  margin: 10px 0;
+}
+
+.cardbox button {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.cardbox button:hover {
+  background-color: #0062cc;
+}
+
+.cardbox .content .header{
+  font-size: 12px;
+}
+
+.cardbox .content .meta {
+  font-size: 12px;
+}
+
+.cardbox .content .price {
+  font-size: 12px;
+}
+
+
