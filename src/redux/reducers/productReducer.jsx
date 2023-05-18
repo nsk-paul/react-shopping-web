@@ -1,4 +1,4 @@
-import { SELECTED_PRODUCT, SET_PRODUCTS } from "../actions/productActions";
+import { REMOVE_SELECTED_PRODUCT, SELECTED_PRODUCT, SET_PRODUCTS } from "../actions/productActions";
 
 const initialState = {
     products:[]
@@ -11,12 +11,6 @@ export const productReducer = (state = initialState, action) => {
             return ({
                 ...state, products: action.payload
             })
-
-        case SELECTED_PRODUCT:
-
-            return ({
-                ...state, products:action.payload
-            })
     
         default:
 
@@ -25,3 +19,25 @@ export const productReducer = (state = initialState, action) => {
             
     }
 }
+
+
+export const productDetailsReducer = (state = {}, action) => {
+    switch (action.type) {
+        case SELECTED_PRODUCT:
+
+            return ({
+                ...state, ...action.payload
+            })
+
+        case REMOVE_SELECTED_PRODUCT:
+            return {};
+    
+        default:
+
+            return state;
+
+            
+    }
+}
+
+

@@ -3,7 +3,7 @@ import { useSelector } from 'react-redux'
 import { Link } from 'react-router-dom';
 
 function ProductComponent() {
-
+    //if using the same reducer, error will occur because the products is used inside the selectProduct action
     const products = useSelector((state) => state.allProducts.products);
 
     const renderList = products.map((product) => {
